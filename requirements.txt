@@ -1,0 +1,6 @@
+Django==1.7
+django-classy-tags==0.5.1
+gnureadline==6.3.3
+ipython==2.3.0
+readline==6.2.4.1
+wsgiref==0.1.2

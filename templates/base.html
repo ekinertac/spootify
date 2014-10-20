@@ -1,0 +1,36 @@
+{% load bower %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify</title>
+</head>
+<body>
+
+    <div id="sidebar" ng-app="Sidebar">
+        <div ng-controller="Playlists">
+            <ul>
+                <li ng-repeat="playlist in playlists">
+                    <a href="#" ng-click="getPlaylist(playlist.id)">[[ playlist.title ]]</a>
+                </li>
+            </ul>
+
+            <div ng-if="show">
+                <h4>Tracks</h4>
+                <ul>
+                    <li ng-repeat="track in tracks">
+                        [[ track ]]
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    {% bower 'js' 'jquery' %}
+    {% bower 'js' 'angular' %}
+
+    <script src="/static/app/app.js"></script>
+
+</body>
+</html>
