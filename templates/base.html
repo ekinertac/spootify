@@ -1,36 +1,67 @@
-{% load bower %}
+{% load bower static %}
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Spotify</title>
-</head>
-<body>
 
-    <div id="sidebar" ng-app="Sidebar">
-        <div ng-controller="Playlists">
-            <ul>
-                <li ng-repeat="playlist in playlists">
-                    <a href="#" ng-click="getPlaylist(playlist.id)">[[ playlist.title ]]</a>
+    {% bower 'css' 'bootstrap' %}
+    {% bower 'css' 'fontawesome' %}
+
+    <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body ng:app="Spotify">
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default btn-round btn-border-green">Submit</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
                 </li>
             </ul>
-
-            <div ng-if="show">
-                <h4>Tracks</h4>
-                <ul>
-                    <li ng-repeat="track in tracks">
-                        [[ track ]]
-                    </li>
-                </ul>
-            </div>
+            <!-- /.navbar-collapse -->
         </div>
-
     </div>
+    <!-- /.container-fluid -->
+</nav>
 
-    {% bower 'js' 'jquery' %}
-    {% bower 'js' 'angular' %}
+<div id="layout">
+    <div class="ui-layout-east">East</div>
+    <div class="ui-layout-center">
+        <button type="submit" class="btn btn-default btn-round btn-sm btn-border-green">FOLLOWING</button>
+    </div>
+    <div class="ui-layout-west">West</div>
+</div>
 
-    <script src="/static/app/app.js"></script>
+
+{% bower 'js' 'jquery' %}
+{% bower 'js' 'bootstrap' %}
+{% bower 'js' 'angular' %}
+{% bower 'js' 'jquery-ui' %}
+{% bower 'js' 'jquery-ui-layout-bower' %}
+
+<script src="/static/app/jquery.js"></script>
+<script src="/static/app/app.js"></script>
 
 </body>
 </html>

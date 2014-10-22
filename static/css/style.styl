@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700);
+
+header-height = 50
+
+@import colors
+
+html, body
+    height: 100%
+    font-family: 'Open Sans', sans-serif;
+    background: color-bg-site
+
+#layout
+    width: 100%
+    height: 100%
+    .ui-layout-center, .ui-layout-east, .ui-layout-west
+        padding-top: 55px !important
+        background: color-bg-site !important
+        color: color-text-site !important
+        border: none!important
+    .ui-layout
+        width = 5px
+        &-toggler
+            width: width !important
+            background: color-bg-sidebar + 20 !important
+        &-resizer
+            width: width !important
+            background: color-bg-sidebar !important
+            border: none!important
+            cursor: col-resize!important
+
+.default
+    margin: 0
+    padding: 0
+
+
+
+.btn-round
+    border-radius 150px
+
+.btn
+    padding-left: 25px
+    padding-right: 25px
+    &-border
+        &-green
+            border: 2px solid color-green
+            background color-bg-site
+            color: color-text-site
+            &:hover
+                border: 2px solid color-text-site
+                background color-bg-site
+                color: color-text-site

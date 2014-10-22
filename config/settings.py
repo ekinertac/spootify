@@ -38,8 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 )
 THIRD_PARTY_APPS = (
-    'djangojs',
-    'django_countries',
 )
 CUSTOM_APPS = (
     'config',
