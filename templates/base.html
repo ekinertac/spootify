@@ -47,10 +47,21 @@
 
 <div id="layout" ng-controller="IndexController">
     <div class="ui-layout-west">
+        <ul id="menu">
+            <li><a href="#">Browse</a></li>
+            <li><a href="#">Activity</a></li>
+            <li><a href="#">Radio</a></li>
+            <li><a href="#">Follow</a></li>
+            <li><a href="#">Top Lists</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Play Queue</a></li>
+        </ul>
+
+        <hr/>
+
         <ul id="playlist">
             <li ng-repeat="list in playlists">
                 <a href="#" ng-click="OpenPlayList([[ list.id ]])">[[ list.name ]]</a>
-                <span class="muted small">by [[ list.owner ]]</span>
             </li>
         </ul>
     </div>
