@@ -1,0 +1,16 @@
+#!/bin/bash
+SITE=`pwd`
+
+echo "$SITE"
+if [ $1 ]; then
+    python $SITE/manage.py runserver_plus $1 &
+else
+    python $SITE/manage.py runserver_plus &
+fi
+
+# stylus -w $SITE/static/css/styles.styl -o $SITE/static/css/ &
+
+echo " everything works like a charm! "
+trap "kill -TERM -$$" SIGINT
+
+wait

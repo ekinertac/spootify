@@ -37,8 +37,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 )
+
 THIRD_PARTY_APPS = (
+    'django_extensions',
 )
+
 CUSTOM_APPS = (
     'config',
     'apps.core',
