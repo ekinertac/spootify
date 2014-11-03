@@ -1,6 +1,9 @@
 Django==1.7
+Werkzeug==0.9.6
 django-classy-tags==0.5.1
+django-extensions==1.4.5
 gnureadline==6.3.3
 ipython==2.3.0
 readline==6.2.4.1
+six==1.8.0
 wsgiref==0.1.2
