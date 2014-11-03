@@ -12,6 +12,6 @@ $('#layout').layout({
     east__size: 300,
     east__maxSize: 250,
     east__minSize: 100,
-    east__initClosed: false,
+    east__initClosed: true,
     east__initHidden: false
 });

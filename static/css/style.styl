@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700);
-
 header-height = 50
 
 // Colors
@@ -13,16 +11,31 @@ color-green = rgb(95 135 0)
 color-green-light = rgb(132 189 0)
 color-red = rgb(251 95 73)
 
-color-apple-red = color-apple-red
+color-apple-red = color-red
 color-apple-yellow = rgb(250 183 14)
 color-apple-green = rgb(26 198 50)
 // End Colors
 
+//Imports
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin,latin-ext');
+@import navbar
+//End Imports
 
 html, body
     height: 100%
     font-family: 'Open Sans', sans-serif;
     background: color-bg-site
+    font-size: 12px
+
+a
+    color: color-text-site
+    cursor: default
+hr
+    border-top: 1px solid color-bg-sidebar + 20
+
+ul
+    margin:0
+    padding:0
 
 #layout
     width: 100%
@@ -43,12 +56,32 @@ html, body
             border: none!important
             cursor: col-resize!important
 
-#playlist
-    li
-        text-overflow: ellipsis
-        white-space: nowrap
-        width: 100%
-        overflow: hidden
+.ui-layout-west
+    padding-left: 20px!important
+    #addPlaylist
+        margin: 30px 0
+        .form-control
+            margin: 10px 0
+
+    ul
+        margin:0 0 30px 0
+        list-style: none
+    ul#browsemenu, ul#playlist
+        li
+            text-overflow: ellipsis
+            white-space: nowrap
+            width: 100%
+            overflow: hidden
+            margin: 7px 0
+            font-size: 14px
+            a
+                text-decoration none
+                &:hover
+                    color: color-text-site + 20
+            i
+                margin: 0 10px 0 0
+                width: 22px
+                font-size: 16px
 
 .default
     margin: 0
@@ -70,3 +103,14 @@ html, body
                 border: 2px solid color-text-site
                 background color-bg-site
                 color: color-text-site
+
+
+.form-control
+    background: color-bg-sidebar + 20
+    border: none
+    color: white
+    height: 23px
+    font-size: 12px
+    &:focus
+        box-shadow: none
+        outline: none

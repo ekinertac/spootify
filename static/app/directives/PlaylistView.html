@@ -1,0 +1,8 @@
+<ul id="playlist">
+    <li ng-repeat="list in playlists">
+        <a named-route="playlist-detail" kwarg-id="[[list.id]]">
+            <i class="fa fa-list"></i>
+            [[ list.title ]]
+        </a>
+    </li>
+</ul>

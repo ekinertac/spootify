@@ -1,39 +1,26 @@
-var Spotify = angular.module('Spotify', ['ngRoute']);
+var Spotify = angular.module('Spotify', [
+    'ngRoute',
+    'Spotify.Directives',
+    'zj.namedRoutes'
+]);
 
-Spotify.config(function ($interpolateProvider, $routeProvider) {
-
+Spotify.config(function ($interpolateProvider, $routeProvider, $locationProvider) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
 
-//    $routeProvider
-//        .when('/', {controller: 'IndexController'})
-//        .when('/playlist/detail/:id', {controller: 'PlayListDetailController'})
-//        .otherwise({redirectTo: '/'});
+    if (window.history && window.history.pushState) {
+        $locationProvider.html5Mode(true);
+    }
 
+    $routeProvider
+        .when('/playlist/:id', {
+            templateUrl: '/static/app/views/PlaylistDetail.html',
+            controller: 'PlaylistDetailController',
+            name: 'playlist-detail'
+        })
 });
 
-
-Spotify.controller('IndexController', function ($scope) {
-    $scope.playlists = Resources.playlists;
-    $scope.showPlaylist = false;
-    $scope.sortBy = 'title';
-    $scope.reverse = false;
-
-    $scope.OpenPlayList = function (id) {
-        $scope.playlist = Resources.playlist_detail[id];
-        $scope.tracks = Resources.playlist_detail[id]['tracks'];
-        $scope.showPlaylist = true;
-    };
-
-    $scope.ClosePlayList = function () {
-        $scope.showPlaylist = false;
-    };
-
+Spotify.controller('PlaylistDetailController', function ($scope, $routeParams) {
+    $scope.list = Resource.playlist_detail[$routeParams.id]
 });
-
-Spotify.controller('PlayListDetailController', function ($scope, $routeParams) {
-    $scope.playlist = Resources.playlist_detail[$routeParams.id];
-    console.log(Resources.playlist_detail[$routeParams.id]);
-});
-
 

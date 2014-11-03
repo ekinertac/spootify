@@ -1,0 +1,11 @@
+<div id="addPlaylist">
+
+    <a class="btn btn-xs btn-border-green" href="#" ng-click="showForm=!showForm">
+        <i class="fa fa-plus"></i> Add Playlist
+    </a>
+
+    <form novalidate ng-if="showForm" ng-submit="createList(name)">
+        <input class="form-control" type="text" placeholder="Playlist Name" ng-model="name"/>
+    </form>
+
+</div>
