@@ -2,6 +2,8 @@ assets
 node_modules
 .idea
 
+.DS_Store
+
 ### https://raw.github.com/github/gitignore/d9cc01e935a8f0f961a3b2eed38c16d27cc07f64/python.gitignore
 # Byte-compiled / optimized / DLL files
 __pycache__/
