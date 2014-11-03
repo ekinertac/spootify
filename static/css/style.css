@@ -169,6 +169,16 @@ ul {
   padding-left: 25px;
   padding-right: 25px;
 }
+.btn-green {
+  border: 2px solid #5f8700;
+  background: #5f8700;
+  color: #dfe0e6;
+}
+.btn-green:hover {
+  border: 2px solid #5f8700;
+  background: #87af28;
+  color: #dfe0e6;
+}
 .btn-border-green {
   border: 2px solid #5f8700;
   background: #121314;

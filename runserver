@@ -8,7 +8,7 @@ else
     python $SITE/manage.py runserver_plus &
 fi
 
-# stylus -w $SITE/static/css/styles.styl -o $SITE/static/css/ &
+#stylus -w $SITE/static/css/styles.styl -o $SITE/static/css/ &
 
 echo " everything works like a charm! "
 trap "kill -TERM -$$" SIGINT
