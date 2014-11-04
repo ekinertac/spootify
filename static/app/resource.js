@@ -9,13 +9,13 @@ var Artists = {
 };
 
 var Tracks = [
-    {title: 'Whiplash', artist: Artists[0], time: '4:25', id:0},
-    {title: 'One', artist: Artists[1], time: '4:25', id:1},
-    {title: 'Damage, Inc.', artist: Artists[2], time: '4:25', id:2},
-    {title: 'Holier Than Thou', artist: Artists[3], time: '4:25', id:3},
-    {title: 'Master Of Puppets', artist: Artists[4], time: '4:25', id:4},
-    {title: 'Creeping Death', artist: Artists[5], time: '4:25', id:5},
-    {title: 'Eye of the Beholder', artist: Artists[6], time: '4:25', id:6}
+    {title: 'Whiplash', artist: Artists[0], time: '4:25', id:0, file: '/static/media/demo.wav'},
+    {title: 'One', artist: Artists[1], time: '4:25', id:1, file: '/static/media/demo.wav'},
+    {title: 'Damage, Inc.', artist: Artists[2], time: '4:25', id:2, file: '/static/media/demo.wav'},
+    {title: 'Holier Than Thou', artist: Artists[3], time: '4:25', id:3, file: '/static/media/demo.wav'},
+    {title: 'Master Of Puppets', artist: Artists[4], time: '4:25', id:4, file: '/static/media/demo.wav'},
+    {title: 'Creeping Death', artist: Artists[5], time: '4:25', id:5, file: '/static/media/demo.wav'},
+    {title: 'Eye of the Beholder', artist: Artists[6], time: '4:25', id:6, file: '/static/media/demo.wav'}
 ];
 
 var Resource = {

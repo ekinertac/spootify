@@ -321,7 +321,7 @@ ul {
   font-size: 16px;
   color: #fff;
   position: absolute;
-  top: -5px;
+  top: 0px;
   right: 0px;
 }
 #footer-player .volume-controller .cdbl-slider {
@@ -332,10 +332,9 @@ ul {
 }
 #footer-player .volume-controller .ui-slider-handle {
   border: none;
-  background: #cdcdcd;
+  background: #8f9594;
   border-radius: 50px;
   top: -0.45em;
-  outline: none;
 }
 #footer-player .volume-controller .ui-widget-content {
   background: #5d6362;
@@ -353,7 +352,6 @@ ul {
   margin: 0 7px 0 0;
 }
 #footer-player .controllers .play-pause {
-  border: 1px solid #fff;
   border-radius: 50px;
   text-align: center;
   width: 30px;

@@ -9,17 +9,17 @@ Spotify.controller('CreateNewPlaylistController', function ($scope) {
     $scope.create = create;
 });
 
-Spotify.controller('PlaylistDetailController', function ($scope, $routeParams, AudioControl) {
+Spotify.controller('PlaylistDetailController', function ($scope, $rootScope, $routeParams, AudioControl) {
     $scope.list = Resource.playlist_detail[$routeParams.id];
-
+    $rootScope.isPlaying = false;
     $scope.idSelectedTrack = null;
     $scope.idPlayingTrack = null;
     $scope.setSelected = function (id) {
         $scope.idSelectedTrack = id;
     };
 
-    $scope.play = function(id){
-        AudioControl.play(id);
-        $scope.idPlayingTrack = id;
+    $scope.play = function (track) {
+        AudioControl.play(track.file);
+        $rootScope.isPlaying = true;
     }
 });

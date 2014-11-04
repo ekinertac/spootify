@@ -3,7 +3,9 @@
         <div class="col-sm-12">
             <div class="col-sm-1 controllers">
                 <span class="backward"><i class="fa fa-step-backward"></i></span>
-                <span class="play-pause"><i class="fa fa-play"></i></span>
+                <span class="play-pause" ng-click="playPause()">
+                    <i class="fa" ng-class="{'fa-play': !isPlaying, 'fa-pause': isPlaying}"></i>
+                </span>
                 <span class="forward"><i class="fa fa-step-forward"></i></span>
             </div>
             <div class="col-sm-1 volume-controller">
@@ -13,7 +15,7 @@
                 </div>
 
             </div>
-            <div class="col-sm-8">bar</div>
+            <div class="col-sm-8" id="waveform"></div>
             <div class="col-sm-2">time mime</div>
         </div>
     </div>

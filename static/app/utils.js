@@ -9,7 +9,7 @@ Utils.directive("slider", function () {
         },
         link: function (scope, elem, attrs) {
             var setModel = function (value) {
-                scope.model = value;
+                scope.value = value;
             };
 
             $(elem).slider({

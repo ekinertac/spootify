@@ -1,3 +1,10 @@
+var wavesurfer = Object.create(WaveSurfer);
+var waveOptions = {
+    height: 50,
+    container: '#waveform',
+    waveColor: '#455F00',
+    progressColor: '#84bd00'
+};
 var directives = angular.module('Spotify.Directives', []);
 
 directives.directive('playlist', function () {
@@ -81,7 +88,8 @@ directives.directive('footerPlayer', function () {
         scope: true,
         replace: true,
         templateUrl: '/static/app/directives/footerPlayer.html',
-        controller: function ($scope, $element) {
+        controller: function ($scope, $rootScope, $element, AudioControl) {
+            $rootScope.isPlaying = false;
             $scope.volume = 80;
             $scope.sliderConfig = {
                 min: -1,
@@ -90,11 +98,17 @@ directives.directive('footerPlayer', function () {
                 value: $scope.volume
             };
 
-            $scope.setModel = function (value) {
-                $scope.volume = value;
-            };
+            wavesurfer.init(waveOptions);
+            wavesurfer.setVolume($scope.volume / 100);
 
+            $scope.$watch(function(){
+                wavesurfer.setVolume($scope.volume / 100)
+            });
 
+            $scope.playPause = function(){
+                AudioControl.playPause();
+                $rootScope.isPlaying = !$rootScope.isPlaying;
+            }
         }
     }
 });
