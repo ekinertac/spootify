@@ -14,7 +14,7 @@ Spotify.config(function ($interpolateProvider, $routeProvider, $locationProvider
     }
 
     $routeProvider
-        .when('/playlist/:id', {
+        .when('/ng/playlist/:id', {
             templateUrl: '/static/app/views/PlaylistDetail.html',
             controller: 'PlaylistDetailController',
             name: 'playlist-detail'

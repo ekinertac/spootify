@@ -4,6 +4,6 @@ from django.views.generic.base import RedirectView
 from apps.core.views import Index
 
 urlpatterns = patterns('',
-    url(r'^.*', Index.as_view()),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^ng/.*$', Index.as_view()),
 )
