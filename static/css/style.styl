@@ -1,50 +1,19 @@
-header-height = 50
-
-// Colors
-color-bg-site = rgb(18 19 20)
-color-bg-sidebar = rgb(34 35 38)
-
-color-text-site = rgb(223 224 230)
-color-text-dark = rgb(143 149 148)
-
-color-green = rgb(95 135 0)
-color-green-light = rgb(132 189 0)
-color-red = rgb(251 95 73)
-
-color-apple-red = color-red
-color-apple-yellow = rgb(250 183 14)
-color-apple-green = rgb(26 198 50)
-// End Colors
-
-//Imports
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin,latin-ext');
+@import colors
 @import navbar
-//End Imports
-
-html, body
-    height: 100%
-    font-family: 'Open Sans', sans-serif;
-    background: color-bg-site
-    font-size: 12px
-
-a
-    color: color-text-site
-    cursor: default
-hr
-    border-top: 1px solid color-bg-sidebar + 20
-
-ul
-    margin:0
-    padding:0
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin,latin-ext');
+@import buttons
+@import dropdown
+@import common
 
 #layout
     width: 100%
     height: 100%
     .ui-layout-center, .ui-layout-east, .ui-layout-west
         padding-top: 55px !important
+        padding-bottom: 50px !important
         background: color-bg-site !important
         color: color-text-site !important
-        border: none!important
+        border: none !important
     .ui-layout
         width = 5px
         &-toggler
@@ -53,18 +22,18 @@ ul
         &-resizer
             width: width !important
             background: color-bg-sidebar !important
-            border: none!important
-            cursor: col-resize!important
+            border: none !important
+            cursor: col-resize !important
 
 .ui-layout-west
-    padding-left: 20px!important
+    padding-left: 20px !important
     #addPlaylist
         margin: 30px 0
         .form-control
             margin: 10px 0
 
     ul
-        margin:0 0 30px 0
+        margin: 0 0 30px 0
         list-style: none
     ul#browsemenu, ul#playlist
         li
@@ -83,37 +52,6 @@ ul
                 width: 22px
                 font-size: 16px
 
-.default
-    margin: 0
-    padding: 0
-
-
-.btn-round
-    border-radius 150px
-
-.btn
-    padding-left: 25px
-    padding-right: 25px
-    &-green
-        border: 2px solid color-green
-        background color-green
-        color: color-text-site
-        &:hover
-            border: 2px solid color-green
-            background color-green + 40
-            color: color-text-site
-
-    &-border
-        &-green
-            border: 2px solid color-green
-            background color-bg-site
-            color: color-text-site
-            &:hover
-                border: 2px solid color-text-site
-                background color-bg-site
-                color: color-text-site
-
-
 .form-control
     background: color-bg-sidebar + 20
     border: none
@@ -123,3 +61,89 @@ ul
     &:focus
         box-shadow: none
         outline: none
+
+#playlist-detail
+    .playlist-title
+        h1
+            margin-bottom: 50px
+            font-weight: 300
+
+    .playlist-info h5
+        color: color-text-site - 100
+        font-size: 13px
+        a
+            color: color-text-site
+
+    .playlist-table
+        font-size: 14px
+        .table > thead > tr > th, .table > tbody > tr > td
+            border-bottom: 1px solid color-bg-sidebar + 10
+
+        .table > thead > tr > th
+            text-transform: uppercase
+            font-weight: 300
+
+        .table tr
+            font-weight: 400
+            &.selected td
+                background: color-bg-sidebar + 10
+            &.playing td
+                background: color-bg-sidebar + 10
+                color: color-green
+
+        .table-hover tr:hover td
+            background: color-bg-sidebar
+
+#footer-player
+    position: fixed
+    height: 50px
+    width: 100%
+    border-top: 1px solid color-bg-sidebar + 10
+    background: color-bg-sidebar
+    bottom: 0
+    left: 0
+    z-index: 5000
+    .volume-controller
+        margin: 20px 0 0 0
+        position: relative
+        i
+            font-size: 16px
+            color: white
+            position: absolute
+            top: -5px
+            right: 0px
+
+        .cdbl-slider
+            width: 80%
+        .ui-slider-range
+            background: color-green
+        .ui-slider-handle
+            border: none
+            background: white - 50
+            border-radius: 50px
+            top: -0.45em
+            outline: none
+
+        .ui-widget-content
+            background: color-text-dark - 50
+            height: 5px
+            border-radius: 5px
+            border: none
+
+
+    .controllers
+        margin: 8px 0 0 0
+        span
+            display: inline-block
+            color: white
+            font-size: 16px
+            margin: 0 7px 0 0
+        .play-pause
+            border: 1px solid #fff
+            border-radius: 50px
+            text-align: center
+            width: 30px
+            padding: 4px 0px 0px 4px
+            height: 30px
+
+

@@ -1,26 +1,269 @@
-<div class="row">
-    <div class="col-sm-3">
-        <div class="col-sm-6">
-            <img src="http://dummyimage.com/100"/>
-            <img src="http://dummyimage.com/100"/>
+<div id="playlist-detail">
+    <div class="row">
+        <div class="col-sm-12 playlist-title">
+            <div class="subtitle">PLAYLIST</div>
+            <h1>[[list.title]]</h1>
+
+            <div class="buttons pull-left">
+                <button type="button" class="btn btn-green"><i class="fa fa-play"></i> Play</button>
+                <div class="dropdown inline">
+                    <button class="btn btn-black dropdown-toggle" type="button" data-toggle="dropdown">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-dark" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pull-right">
+                <div>FOLLOWERS</div>
+                <div class="text-right">0</div>
+            </div>
+
+
         </div>
-        <div class="col-sm-6">
-            <img src="http://dummyimage.com/100"/>
-            <img src="http://dummyimage.com/100"/>
+    </div>
+    <br/>
+
+    <div class="row playlist-info">
+        <div class="col-sm-12 hr-border">
+            <h5>Created by <a href="#">[[ list.owner.name ]]</a> | 10 songs, 37 mins</h5>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="row playlist-table">
+        <div class="col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Track</th>
+                        <th>Artist</th>
+                        <th>Time</th>
+                        <th>Album</th>
+                        <th>Added</th>
+                        <th>User</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr><tr ng-repeat="track in list.tracks"
+                        ng-click="setSelected(track.id)"
+                        ng-dblclick="play(track.id)"
+                        ng-class="{selected: track.id === idSelectedTrack, playing: track.id == idPlayingTrack}">
+                        <td>[[track.title]]</td>
+                        <td>[[track.artist.name]]</td>
+                        <td>[[track.time]]</td>
+                        <td>Album</td>
+                        <td>Added</td>
+                        <td>[[list.owner.name]]</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
-
-    <div class="col-sm-9">
-        <div class="subtitle">PLAYLIST</div>
-        <h1 style="font-weight: 300">[[list.title]]</h1>
-
-        <div class="buttons">
-            <a class="btn btn-xs btn-green" href="#">
-                <i class="fa fa-play"></i> Play
-            </a>
-        </div>
-
-    </div>
-
 </div>

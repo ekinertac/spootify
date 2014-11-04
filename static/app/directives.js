@@ -58,9 +58,11 @@ directives.directive('createplaylist', function () {
         replace: true,
         templateUrl: '/static/app/directives/CreatePlaylist.html',
         controller: function ($scope, $element) {
-            var max = _.max(Resource.playlists, function(item) { return item.id; });
+            var max = _.max(Resource.playlists, function (item) {
+                return item.id;
+            });
             $scope.showForm = false;
-            $scope.createList = function(name){
+            $scope.createList = function (name) {
                 Resource.playlists.push({
                     name: name,
                     owner: 'Ekin Ertaç',
@@ -72,3 +74,28 @@ directives.directive('createplaylist', function () {
         }
     }
 });
+
+directives.directive('footerPlayer', function () {
+    return {
+        restrict: 'A',
+        scope: true,
+        replace: true,
+        templateUrl: '/static/app/directives/footerPlayer.html',
+        controller: function ($scope, $element) {
+            $scope.volume = 80;
+            $scope.sliderConfig = {
+                min: -1,
+                max: 100,
+                step: 1,
+                value: $scope.volume
+            };
+
+            $scope.setModel = function (value) {
+                $scope.volume = value;
+            };
+
+
+        }
+    }
+});
+

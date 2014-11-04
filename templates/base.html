@@ -7,6 +7,7 @@
 
     {% bower 'css' 'bootstrap' %}
     {% bower 'css' 'components-font-awesome' %}
+    {% bower 'css' 'jquery-ui-smoothness' %}
 
     <link rel="stylesheet" href="/static/css/style.css"/>
     <base href="/"/>
@@ -25,10 +26,14 @@
         <div ng-view></div>
     </div>
     <div class="ui-layout-east">
-        <div recomments></div>
+        <div recommend></div>
         <div friendfeed></div>
     </div>
 </div>
+
+<div footer-player></div>
+
+
 
 {% include '_templates.html' %}
 
@@ -43,13 +48,18 @@
 {% bower 'js' 'lodash' %}
 {% bower 'js' 'jquery-ui' %}
 {% bower 'js' 'jquery-ui-layout-bower' %}
+{% bower 'js' 'angular-ui-slider' %}
+{% bower 'js' 'wavesurfer.js' %}
 
 <script src="/static/app/resource.js"></script>
 <script src="/static/app/jquery-scripts.js"></script>
 <script src="/static/app/app.js"></script>
 
+<script src="/static/app/utils.js"></script>
 <script src="/static/app/directives.js"></script>
+<script src="/static/app/services.js"></script>
 <script src="/static/app/controllers/playlist.js"></script>
+
 
 </body>
 </html>

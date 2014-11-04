@@ -9,13 +9,13 @@ var Artists = {
 };
 
 var Tracks = [
-    {title: 'Whiplash', artist: 'Motörhead', time: '4:25'},
-    {title: 'One', artist: 'Crematory', time: '4:25'},
-    {title: 'Damage, Inc.', artist: 'Floatsam & Jetsam', time: '4:25'},
-    {title: 'Holier Than Thou', artist: 'Testament', time: '4:25'},
-    {title: 'Master Of Puppets', artist: 'Ugly Kid Joe', time: '4:25'},
-    {title: 'Creeping Death', artist: 'Dark Angel', time: '4:25'},
-    {title: 'Eye of the Beholder', artist: 'In Flames', time: '4:25'}
+    {title: 'Whiplash', artist: Artists[0], time: '4:25', id:0},
+    {title: 'One', artist: Artists[1], time: '4:25', id:1},
+    {title: 'Damage, Inc.', artist: Artists[2], time: '4:25', id:2},
+    {title: 'Holier Than Thou', artist: Artists[3], time: '4:25', id:3},
+    {title: 'Master Of Puppets', artist: Artists[4], time: '4:25', id:4},
+    {title: 'Creeping Death', artist: Artists[5], time: '4:25', id:5},
+    {title: 'Eye of the Beholder', artist: Artists[6], time: '4:25', id:6}
 ];
 
 var Resource = {

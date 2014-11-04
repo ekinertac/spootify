@@ -19,6 +19,9 @@
     "lodash": "~2.4.1",
     "jquery-ui": "~1.11.2",
     "jquery-ui-layout-bower": "~1.4.4",
-    "angular-named-routes": "~0.0.16"
+    "angular-named-routes": "~0.0.16",
+    "angular-ui-slider": "~0.0.2",
+    "wavesurfer.js": "~1.0.6",
+    "jquery-ui-smoothness": "~1.11.1"
   }
 }

@@ -1,6 +1,7 @@
 var Spotify = angular.module('Spotify', [
     'ngRoute',
     'Spotify.Directives',
+    'Spotify.Utils',
     'zj.namedRoutes'
 ]);
 
@@ -18,9 +19,5 @@ Spotify.config(function ($interpolateProvider, $routeProvider, $locationProvider
             controller: 'PlaylistDetailController',
             name: 'playlist-detail'
         })
-});
-
-Spotify.controller('PlaylistDetailController', function ($scope, $routeParams) {
-    $scope.list = Resource.playlist_detail[$routeParams.id]
 });
 
